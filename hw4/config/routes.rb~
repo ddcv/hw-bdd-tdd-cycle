@@ -1,0 +1,12 @@
+Rottenpotatoes::Application.routes.draw do
+  resources :movies do
+    member do
+        get :findwithsamedirector
+    end
+  end
+  # map '/' to be a redirect to '/movies'
+  root :to => redirect('/movies')
+
+#  post '/movies/:id/findwithsamedirector', to: 'movies#findwithsamedirector'
+
+end
